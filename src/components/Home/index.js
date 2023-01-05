@@ -5,6 +5,7 @@ import LogoTitle from '../../assets/images/logo-m.png'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import Logo from './Logo'
+import InfoCard from '../InfoCard'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -60,14 +61,12 @@ const Home = () => {
               idx={21}
             />
           </h1>
-          <h2>
-            Frontend Developer / JavaScript intermidiate / React beginner{' '}
-          </h2>
+          <h2>Frontend Developer / JavaScript / React </h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
         </div>
-        <Logo />
+        <InfoCard />
       </div>
       <Loader type="pacman" />
     </>
