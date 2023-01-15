@@ -1,11 +1,26 @@
 .home-page {
   .text-zone {
+    .breakpoint {
+      display: none;
+      @media (max-width: 500px) {
+        display: flex;
+      }
+    }
     position: absolute;
     left: 10%;
     top: 50%;
     transform: translateY(-50%);
     width: 40%;
     max-height: 90%;
+
+    @media (max-width: 870px) {
+      width: 70%;
+      left: 20%;
+    }
+
+    @media (max-width: 500px) {
+      left: 23%;
+    }
   }
 
   h1 {
@@ -80,4 +95,3 @@
     }
   }
 }
-

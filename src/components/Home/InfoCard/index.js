@@ -3,8 +3,8 @@ import './index.scss'
 
 const InfoCard = () => {
   return (
-    <div class="card-container">
-      <div class="card">
+    <div className="card-container">
+      <div className="card">
         <h3>Hover me</h3>
         <br></br>
         <p>
@@ -13,17 +13,17 @@ const InfoCard = () => {
           consequatur ullam accusantium, nesciunt aut fugiat at ipsam harum
           eveniet dolore.
         </p>
-        <div class="layers">
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="layer"></div>
+        <div className="layers">
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
+          <div className="layer"></div>
         </div>
       </div>
     </div>

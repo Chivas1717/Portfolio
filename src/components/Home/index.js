@@ -1,20 +1,20 @@
+import './index.scss'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from 'react-loaders'
+
 import LogoTitle from '../../assets/images/logo-m.png'
 import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
-import Logo from './Logo'
-import InfoCard from '../InfoCard'
+import InfoCard from './InfoCard'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const nameArray = ['a', 'r', 'k', ',']
   const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
+    // 'w',
+    // 'e',
+    // 'b',
+    // ' ',
     'd',
     'e',
     'v',
@@ -55,10 +55,15 @@ const Home = () => {
               idx={17}
             />
             <br />
+            <span className={`${letterClass} _21`}>w</span>
+            <span className={`${letterClass} _22`}>e</span>
+            <span className={`${letterClass} _23`}>b</span>
+            <span className={`${letterClass} _24`}> </span>
+            <br className="breakpoint" />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={21}
+              idx={25}
             />
           </h1>
           <h2>Frontend Developer / JavaScript / React </h2>

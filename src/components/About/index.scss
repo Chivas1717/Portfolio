@@ -7,6 +7,14 @@
   position: absolute;
   right: 0;
   overflow: hidden;
+
+  @media (max-width: 1040px) {
+    padding-top: 8%;
+  }
+
+  @media (max-width: 680px) {
+    display: block;
+  }
 }
 
 .cubespinner {
@@ -17,6 +25,10 @@
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 
   div {
     position: absolute;
