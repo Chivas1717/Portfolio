@@ -42,22 +42,30 @@
       text-decoration: none;
 
       i {
-        transition: all 0.3s ease-out;
+        transition: all 1s ease-out;
+      }
+
+      svg {
+        transition: opacity 1s;
+        opacity: 1;
       }
 
       &:hover {
         color: #ffd700;
 
         svg {
+          transition: opacity 1s;
           opacity: 0;
         }
 
         &:after {
+          transition: opacity 1s;
           opacity: 1;
         }
       }
 
       &:after {
+
         content: '';
         font-size: 9px;
         letter-spacing: 2px;
@@ -67,8 +75,8 @@
         width: 100%;
         text-align: center;
         opacity: 0;
-        -webkit-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out;
       }
 
       &:first-child {
