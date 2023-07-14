@@ -1,0 +1,59 @@
+.card-cv {
+  cursor: pointer;
+  //position: relative;
+  width: 620px;
+  height: 400px;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  transition: opacity 1s ease-in-out;
+
+  @media (max-width: 1470px) {
+    width: 420px;
+    height: 300px;
+  }
+
+  @media (max-width: 1140px) {
+    //width: 320px;
+    height: 250px;
+  }
+
+  img {
+    height: 500px;
+  }
+
+  .img-cv:hover + .download-btn {
+    display: block;
+  }
+
+  &:hover {
+    transition: opacity 1s ease-in-out;
+    opacity: 0.8;
+  }
+}
+
+
+
+.download-btn {
+  transition: all 1s ease-in-out;
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 22%;
+  background-color: black;
+  color: white;
+  padding: 13px 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-weight: bold;
+  border-width: 0;
+  cursor: pointer;
+  &:hover {
+    display: block;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}

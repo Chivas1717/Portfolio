@@ -6,6 +6,7 @@ import Loader from 'react-loaders'
 import LogoTitle from '../../assets/images/logo-m.png'
 import AnimatedLetters from '../AnimatedLetters'
 import InfoCard from './InfoCard'
+import CV from "./CVpdf/CV";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -71,7 +72,7 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-        <InfoCard />
+        <CV />
       </div>
       <Loader type="pacman" />
     </>
