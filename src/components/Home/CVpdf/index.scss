@@ -1,3 +1,9 @@
+.wrapper {
+  @media (max-width: 990px) {
+    display: none;
+  }
+}
+
 .card-cv {
   cursor: pointer;
   //position: relative;
