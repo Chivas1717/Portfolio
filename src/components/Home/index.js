@@ -5,7 +5,6 @@ import Loader from 'react-loaders'
 
 import LogoTitle from '../../assets/images/logo-m.png'
 import AnimatedLetters from '../AnimatedLetters'
-import InfoCard from './InfoCard'
 import CV from "./CVpdf/CV";
 
 const Home = () => {
@@ -67,7 +66,7 @@ const Home = () => {
               idx={25}
             />
           </h1>
-          <h2>Fullstack Developer / Flutter / NodeJs / React </h2>
+          <h2>Fullstack Developer / Flutter / NodeJs / React</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
