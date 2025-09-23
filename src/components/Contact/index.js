@@ -47,9 +47,9 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially ambitious or
-            large projects. However, if you have other request or question,
-            don't hesitate to contact me using below form either.
+            I’m always looking for the right challenge — whether that’s joining a fast-moving startup or contributing to a big company with bold ideas.
+            For me, it’s all about the product: if it’s solving real problems and making people’s lives better, I want to be part of it.
+            If you think we’d be a good match, drop me a message below — I’d love to hear about what you’re building.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
