@@ -90,10 +90,10 @@ const Contact = () => {
         <div className="info-map">
           Mark Hudzovskyi,
           <br />
-          Ukraine/Canada,
+          Canada,
           <br />
-          47 Norwood Ave, L6A 3V6 <br />
-          Toronto ON <br />
+          319 Jarvis St, M5B 0C8 <br />
+          Toronto, ON <br />
           <br />
           <span>markgud1717@gmail.com</span>
         </div>
@@ -101,7 +101,7 @@ const Contact = () => {
           <MapContainer center={[43.65323, -79.38318]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[43.65323, -79.38318]}>
-              <Popup>Mark lives here. He is glad to see you)</Popup>
+              <Popup>Mark lives here. Let's connect!</Popup>
             </Marker>
           </MapContainer>
         </div>

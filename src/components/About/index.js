@@ -36,18 +36,13 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm very ambitious front-end developer looking for a role in
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
-          </p>
-          <p align="LEFT">
-            I'm quietly confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            I’m a full-stack software engineer who loves turning ideas into products people actually enjoy using. Most of my work lives in React, Next.js, Flutter, and Node.js, but what excites me most is building clean, simple experiences that solve real problems without overcomplicating things.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a confident
-            person, very sociable, pretty good gamer, a sports fanatic, and
-            tech-obsessed!!!
+            I’m big on communication — I’d rather talk through a problem with the team than over-engineer a solution in silence. I’ve worked in fast-moving startups where I helped take products from zero to real customers, and I’ve learned how much growth comes from testing, iterating, and shipping quickly.
+          </p>
+          <p>
+            Outside of coding, I’m a lifelong cat lover, sports fanatic, and someone who just genuinely enjoys working with people. Tech is my craft, but collaboration is what makes it meaningful.
           </p>
         </div>
         <div className="stage-cube-cont">

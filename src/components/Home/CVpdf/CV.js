@@ -1,6 +1,6 @@
-import CVimg from '../../../assets/images/CV.jpg'
+import CVimg from '../../../assets/images/CV.jpeg'
 import './index.scss'
-import File from '../../../assets/pdf/CV.pdf'
+import File from '../../../assets/pdf/resume.pdf'
 
 const CV = () => {
   return (

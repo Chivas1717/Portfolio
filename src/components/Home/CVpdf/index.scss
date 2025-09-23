@@ -5,30 +5,36 @@
 }
 
 .card-cv {
-  cursor: pointer;
   //position: relative;
-  width: 620px;
-  height: 400px;
+  width: 420px;
+  aspect-ratio: 1 / 1.4142; // A4 portrait ratio (approx 1:√2)
   position: absolute;
   right: 5%;
   top: 10%;
   transition: opacity 1s ease-in-out;
 
   @media (max-width: 1470px) {
-    width: 420px;
-    height: 300px;
+    width: 360px;
   }
 
   @media (max-width: 1140px) {
-    //width: 320px;
-    height: 250px;
+    width: 300px;
   }
 
   img {
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent; // letterbox background behind transparent areas
+  }
+  
+  .download-btn {
+    opacity: 0;
+    transition: all .4s ease-in-out;
   }
 
-  .img-cv:hover + .download-btn {
+  &:hover .download-btn {
+    opacity: 1;
     display: block;
   }
 
@@ -44,8 +50,9 @@
   transition: all 1s ease-in-out;
   display: none;
   position: absolute;
-  top: 55%;
-  left: 22%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: black;
   color: white;
   padding: 13px 30px;
@@ -54,9 +61,8 @@
   font-weight: bold;
   border-width: 0;
   cursor: pointer;
-  &:hover {
-    display: block;
-  }
+  opacity: 0;
+  transition: all .4s ease-in-out;
 
   a{
     text-decoration: none;
