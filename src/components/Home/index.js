@@ -66,7 +66,7 @@ const Home = () => {
               idx={25}
             />
           </h1>
-          <h2>Fullstack Developer / Flutter / NodeJs / React</h2>
+          <h2>Fullstack Developer / React / Django / Flutter</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>

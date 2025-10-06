@@ -1,4 +1,4 @@
-import CVimg from '../../../assets/images/CV.jpeg'
+import CVimg from '../../../assets/images/CV.png'
 import './index.scss'
 import File from '../../../assets/pdf/resume.pdf'
 
