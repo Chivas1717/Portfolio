@@ -8,7 +8,7 @@ const CV = () => {
       <div className="card-cv">
         <img src={CVimg} alt="CV" className="img-cv" />
         <button className="download-btn">
-          <a href={File} target="_blank" download="CV-PDF-document">
+          <a href={File} target="_blank" rel="noreferrer" download="CV-PDF-document">
             Download CV
           </a>
         </button>
@@ -18,3 +18,6 @@ const CV = () => {
 }
 
 export default CV
+
+
+

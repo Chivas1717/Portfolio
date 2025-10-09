@@ -16,12 +16,10 @@ const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
-    async function animate() {
-      return await setTimeout(() => {
-        setLetterClass('text-animate-hover')
-      }, 2000)
-    }
-    animate()
+    const timeoutId = window.setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 2000)
+    return () => window.clearTimeout(timeoutId)
   }, [])
 
   return (
@@ -68,9 +66,12 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="pacman" active={true} />
     </>
   )
 }
 
 export default About
+
+
+

@@ -1,33 +1,32 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Loader from 'react-loaders'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const form = useRef()
+  const form = useRef<HTMLFormElement | null>(null)
 
   useEffect(() => {
-    async function animate() {
-      return await setTimeout(() => {
-        setLetterClass('text-animate-hover')
-      }, 2000)
-    }
-    animate()
+    const timeoutId = window.setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 2000)
+    return () => window.clearTimeout(timeoutId)
   }, [])
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    if (!form.current) return
 
     emailjs
       .sendForm('gmail', 'template_w4k6qci', form.current, 'Ed7KZMok0xj7FAW3i')
       .then(
         () => {
           alert('Message successfully sent!')
-          window.location.reload(false)
+          window.location.reload()
         },
         () => {
           alert('Failed to send the message, please try again')
@@ -58,27 +57,13 @@ const Contact = () => {
                   <input placeholder="Name" type="text" name="name" required />
                 </li>
                 <li className="half">
-                  <input
-                    placeholder="Email"
-                    type="email"
-                    name="email"
-                    required
-                  />
+                  <input placeholder="Email" type="email" name="email" required />
                 </li>
                 <li>
-                  <input
-                    placeholder="Subject"
-                    type="text"
-                    name="subject"
-                    required
-                  />
+                  <input placeholder="Subject" type="text" name="subject" required />
                 </li>
                 <li>
-                  <textarea
-                    placeholder="Message"
-                    name="message"
-                    required
-                  ></textarea>
+                  <textarea placeholder="Message" name="message" required></textarea>
                 </li>
                 <li>
                   <input type="submit" className="flat-button" value="SEND" />
@@ -98,7 +83,7 @@ const Contact = () => {
           <span>markgud1717@gmail.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer center={[43.65323, -79.38318]} zoom={13}>
+          <MapContainer center={[43.65323, -79.38318]} zoom={13} style={{ height: '100%', width: '100%' }}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[43.65323, -79.38318]}>
               <Popup>Mark lives here. Let's connect!</Popup>
@@ -106,9 +91,12 @@ const Contact = () => {
           </MapContainer>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="pacman" active={true} />
     </>
   )
 }
 
 export default Contact
+
+
+

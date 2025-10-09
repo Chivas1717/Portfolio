@@ -1,6 +1,13 @@
 import './index.scss'
+import React from 'react'
 
-const AnimatedLetters = ({ letterClass, strArray, idx }) => {
+type AnimatedLettersProps = {
+  letterClass: string
+  strArray: string[]
+  idx: number
+}
+
+const AnimatedLetters: React.FC<AnimatedLettersProps> = ({ letterClass, strArray, idx }) => {
   return (
     <span>
       {strArray.map((char, i) => (
@@ -13,3 +20,6 @@ const AnimatedLetters = ({ letterClass, strArray, idx }) => {
 }
 
 export default AnimatedLetters
+
+
+
