@@ -3,7 +3,7 @@ import LogoM from '../../../assets/images/logo-m.png'
 import './index.scss'
 
 const Logo = () => {
-  const bgRef = useRef()
+  const bgRef = useRef<HTMLDivElement | null>(null)
 
   return (
     <div className="logo-container" ref={bgRef}>
@@ -13,3 +13,5 @@ const Logo = () => {
 }
 
 export default Logo
+
+

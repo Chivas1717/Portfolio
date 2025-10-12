@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 
-const InfoCard = () => {
+const InfoCard: React.FC = () => {
   return (
     <div className="card-container">
       <div className="card">
@@ -31,3 +31,5 @@ const InfoCard = () => {
 }
 
 export default InfoCard
+
+
